@@ -23,6 +23,27 @@ namespace ConsoleApp11
         }*/
     }
 
+
+    // Question21
+
+    public class Exam
+    {
+        public event Question21EventHendeler Question21Event;
+
+    }
+
+    public delegate void Question21EventHendeler(object source, Question21Event e);
+    public class Question21Event : EventArgs
+    {
+        public Student student { get; set; }
+
+        public Question21Event(Student student)
+        {
+            this.student = student;
+        }
+
+    }
+
     
     class Program
     {
